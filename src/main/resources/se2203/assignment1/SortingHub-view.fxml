@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se2203.assignment1.SortingHubController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="800.0">
+         <children>
+            <Pane fx:id="DisplayScreen" layoutX="14.0" layoutY="15.0" prefHeight="333.0" prefWidth="767.0" style="-fx-background-color: rgba(229,228,229); -fx-border-color: black;" />
+            <Button fx:id="SortBtn" layoutX="634.0" layoutY="356.0" mnemonicParsing="false" onAction="#orderArray" prefHeight="13.0" prefWidth="67.0" text="Sort" />
+            <Button fx:id="resetBtn" layoutX="716.0" layoutY="356.0" mnemonicParsing="false" onAction="#reset" prefHeight="20.0" prefWidth="67.0" text="Reset" />
+            <Slider fx:id="ArraySizeSlider" layoutX="360.0" layoutY="361.0" max="128.0" min="32.0" onDragDetected="#sliderSize" onInputMethodTextChanged="#sliderSize" onMouseDragEntered="#sliderSize" onMouseDragOver="#sliderSize" onMouseDragged="#sliderSize" prefHeight="16.0" prefWidth="229.0" />
+            <Label fx:id="arraySzLbl" layoutX="592.0" layoutY="360.0" onDragDetected="#sliderSize" onInputMethodTextChanged="#sliderSize" onMouseDragged="#sliderSize" prefHeight="14.0" prefWidth="40.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="261.0" layoutY="355.0" prefHeight="26.0" prefWidth="117.0" text="Array Size" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="356.0" prefHeight="25.0" prefWidth="89.0" text="Algorithm" />
+            <ComboBox fx:id="comboBox" layoutX="109.0" layoutY="355.0" onAction="#setSortStrategy" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
